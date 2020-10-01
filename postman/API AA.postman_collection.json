@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "666611e5-c9b6-4ef0-b710-a2c0741305ea",
+		"name": "API AA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNzM5YTIxZDBhN2I1MTdhY2UzMmZkOSIsImlhdCI6MTYwMTU3NDQ3NiwiZXhwIjoxNjAxNjYwODc2fQ.Ajf46-tCsd1vyczko0bXWUmUug-eeU7a22Dvl-pd58E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"yelina\",\r\n    \"email\": \"yelina@gmail.com\",\r\n    \"password\": \"yelina\",\r\n    \"roles\" : [\"moderator\" , \"admin\"]\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n     \r\n        \"name\": \"The Twilight Saga Parte III\",\r\n        \"director\": \"Bill Condon\",\r\n        \"year\": 2014,\r\n        \"genere\": \"Fantasy\",\r\n        \"imgURL\": \"https://images.pexels.com/photos/212410/pexels-photo-212410.jpeg?cs=srgb&dl=pexels-freestocksorg-212410.jpg&fm=jpg\"\r\n        \r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNzM5YTIxZDBhN2I1MTdhY2UzMmZkOSIsImlhdCI6MTYwMTU3NDQ3NiwiZXhwIjoxNjAxNjYwODc2fQ.Ajf46-tCsd1vyczko0bXWUmUug-eeU7a22Dvl-pd58E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/movies/5f7253d057329724b4a997ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"5f7253d057329724b4a997ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/movies/5f7269a7a1db2a2db8570d03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"5f7269a7a1db2a2db8570d03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Crepusculo\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/5f72565957329724b4a997f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"5f72565957329724b4a997f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNzYzNWNiYjU2MDg4MjE2ODk1OTNmMiIsImlhdCI6MTYwMTU4MjUzOSwiZXhwIjoxNjAxNjY4OTM5fQ.pZdhm-tVj20GX0LTrajUq8nIjOSj_rkftFkKla_WRfI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n     \r\n        \"name\": \"The Intern\",\r\n        \"director\": \"Nancy Meyers\",\r\n        \"year\": 2015,\r\n        \"genere\": \"Comedia\",\r\n        \"imgURL\": \"https://images.pexels.com/photos/212410/pexels-photo-212410.jpeg?cs=srgb&dl=pexels-freestocksorg-212410.jpg&fm=jpg\"\r\n        \r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "SignUP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\": \"carlos\",\r\n    \"email\": \"carlos@gmail.com\",\r\n    \"password\": \"carlos\",\r\n    \"roles\": [\"admin\", \"moderator\"]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"username\": \"carlos\",\r\n    \"password\": \"carlos\"\r\n   \r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
